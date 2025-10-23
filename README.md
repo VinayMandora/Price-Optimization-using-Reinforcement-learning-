@@ -19,6 +19,7 @@ It learns optimal price adjustments for multiple retail categories — Books, Cl
 
 💾 Runs independently on synthetic datasets generated from CSVs
 
+---
 
 ✅ **Requirements**
 
@@ -30,13 +31,16 @@ matplotlib
 scikit-learn
 tensorflow
 
+---
 
 **Install dependencies:**
 
 pip install -r requirements.txt
 
-⚙️ Setup & Run
+**⚙️ Setup & Run**
+
 **1️⃣ Clone and open the folder**
+
 git clone https://github.com/<yourusername>/dynamic-pricing-rl.git
 cd dynamic-pricing-rl
 
@@ -56,6 +60,8 @@ pip install -r requirements.txt
 
 python src/dqn_model.py --dataset data/books.csv --epochs 20
 python src/q_learning.py --dataset data/books.csv --epochs 20
+
+---
 
 **🧩 How It Works**
 
@@ -100,6 +106,8 @@ Loss: MSE
 
 Implements tabular Q-Learning with learning-rate, discount-factor, and exploration-probability tuning.
 
+---
+
 **📊 Visualization**
 
 Loss Curves — Training vs Validation loss per epoch
@@ -113,6 +121,8 @@ Example:
 Epoch 1 → Reward ≈ 150
 Epoch 20 → Reward ≈ 220 (↑ 46%)
 
+---
+
 **🧠 Insights**
 
 The DQN outperforms tabular Q-Learning on most categories.
@@ -120,6 +130,8 @@ The DQN outperforms tabular Q-Learning on most categories.
 Small price-change environments (e.g. Groceries) converge faster.
 
 Larger action spaces (Electronics, Home & Kitchen) yield slower but steady improvement.
+
+---
 
 **🧪 Customization**
 
@@ -133,6 +145,8 @@ Extend DQN to Double / Dueling / Prioritized Replay variants.
 
 Log experiments using Weights & Biases or MLflow.
 
+---
+
 **⚠️ Notes**
 
 Each row acts as an independent environment (no temporal demand model yet).
@@ -140,6 +154,8 @@ Each row acts as an independent environment (no temporal demand model yet).
 TensorFlow may show deprecation warnings (tf.compat.v1.*) — safe to ignore.
 
 Replace absolute Windows paths (C:\Users\...) with relative paths (e.g., data/books.csv).
+
+---
 
 **🗺️ Roadmap**
 
@@ -152,6 +168,8 @@ Replace absolute Windows paths (C:\Users\...) with relative paths (e.g., data/bo
  Add CLI & config file support
 
  Dockerize for reproducibility
+
+---
 
 
 **👤 Author**
